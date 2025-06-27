@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compte bloqué - La Banque Postale</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f4f6f8;
+    }
+
+    .header {
+      background-color: white;
+      padding: 16px;
+      border-bottom: 1px solid #ddd;
+      text-align: right;
+    }
+
+    .logo-small {
+      height: 40px;
+    }
+
+    .account-container {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: white;
+      box-sizing: border-box;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    h1 {
+      color: #003366;
+      font-size: 22px;
+    }
+
+    .client-name,
+    .account-date {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .account-balance {
+      font-size: 26px;
+      color: green;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+
+    .blocked-message {
+      background-color: #fff5f5;
+      border: 1px solid #ffcccc;
+      padding: 20px;
+      border-radius: 6px;
+      font-weight: bold;
+      color: #a30000;
+      margin-top: 30px;
+      margin-bottom: 40px;
+    }
+
+    .table-wrapper {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #f9f9f9;
+      margin-top: 20px;
+      min-width: 400px;
+    }
+
+    th, td {
+      padding: 12px;
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+    }
+
+    th {
+      background-color: #003366;
+      color: white;
+    }
+
+    td.credit {
+      color: green;
+      font-weight: bold;
+    }
+
+    footer {
+      background: linear-gradient(to bottom, #0050a0, #0072ce);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    .footer-card {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 20px;
+    }
+
+    .footer-card a {
+      color: white;
+      text-decoration: underline;
+    }
+
+    .footer-btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      font-weight: bold;
+      border: 2px solid white;
+      border-radius: 6px;
+      color: white;
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 18px;
+      }
+      .account-balance {
+        font-size: 20px;
+      }
+      th, td {
+        padding: 8px;
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <img
+      src="https://upload.wikimedia.org/wikipedia/fr/d/d4/Logo_La_Banque_postale_2022.svg"
+      alt="Logo La Banque Postale"
+      class="logo-small"
+    />
+  </header>
+
+  <main class="account-container">
+    <h1>Compte courant N° 1045678F933</h1>
+    <p class="client-name">Rodrigo Ventura</p>
+    <p class="account-date">Solde au 27/06/2025</p>
+    <p class="account-balance">1 666 777,00 €</p>
+
+    <div class="blocked-message">
+      ⚠️ Ce compte est temporairement bloqué pour des raisons de sécurité.<br>
+      Veuillez contacter votre conseiller.
+    </div>
+
+    <h2>Mes comptes</h2>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Type de compte</th>
+            <th>Solde</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Compte courant</td>
+            <td class="credit">1 666 777,00 €</td>
+          </tr>
+          <tr>
+            <td>Livret A</td>
+            <td class="credit">12 500,00 €</td>
+          </tr>
+          <tr>
+            <td>Compte joint</td>
+            <td class="credit">3 200,50 €</td>
+          </tr>
+          <tr>
+            <td>Assurance-vie</td>
+            <td class="credit">25 000,00 €</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Historique des opérations</h2>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Libellé</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>26/06/2025</td>
+            <td>Amazon - Achat</td>
+          </tr>
+          <tr>
+            <td>25/06/2025</td>
+            <td>Retrait DAB Lyon</td>
+          </tr>
+          <tr>
+            <td>24/06/2025</td>
+            <td>Prélèvement impôts</td>
+          </tr>
+          <tr>
+            <td>23/06/2025</td>
+            <td>Virement reçu - Société X</td>
+          </tr>
+          <tr>
+            <td>20/06/2025</td>
+            <td>Virement reçu - CryptoWallet</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer>
+    <h2>La Banque Postale, citoyenne</h2>
+    <div class="footer-card">
+      <h3>Espace Assurance La Banque Postale</h3>
+      <p>Vous n'avez pas d'accès Banque En Ligne et souhaitez retrouver vos contrats ?</p>
+      <p><a href="#">Signer mon contrat en ligne</a></p>
+      <a href="#" class="footer-btn">Me connecter à mon espace assurance</a>
+    </div>
+  </footer>
+
+</body>
+</html>

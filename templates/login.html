@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Connexion - La Banque Postale</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f4f6f8;
+    }
+    .header {
+      background-color: white;
+      padding: 16px 24px;
+      border-bottom: 1px solid #ddd;
+    }
+    .logo {
+      height: 50px;
+    }
+    .main {
+      padding: 30px 20px;
+      text-align: center;
+    }
+    .main-title {
+      font-size: 20px;
+      color: #003366;
+      margin-bottom: 30px;
+    }
+    .login-box {
+      background-color: white;
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 8px;
+      text-align: left;
+    }
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+    .remember-me {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+    .remember-me label {
+      margin-left: 8px;
+      font-weight: normal;
+    }
+    .btn-primary {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      background-color: #003366;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn-primary:hover {
+      background-color: #002850;
+    }
+    .forgot-link {
+      margin-top: 20px;
+      font-size: 14px;
+    }
+    .forgot-link a {
+      color: #003366;
+      text-decoration: none;
+    }
+    footer {
+      background: linear-gradient(to bottom, #0050a0, #0072ce);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      margin-top: 60px;
+    }
+    footer h2 {
+      margin-bottom: 20px;
+    }
+    .footer-card {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 20px;
+    }
+    .footer-card a {
+      color: white;
+      text-decoration: underline;
+    }
+    .footer-btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      font-weight: bold;
+      border: 2px solid white;
+      border-radius: 6px;
+      color: white;
+      text-decoration: none;
+    }
+    .erreur {
+      color: red;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <img
+      src="https://upload.wikimedia.org/wikipedia/fr/d/d4/Logo_La_Banque_postale_2022.svg"
+      alt="La Banque Postale"
+      class="logo"
+    />
+  </header>
+
+  <main class="main">
+    <h1 class="main-title">Connexion à votre compte particulier</h1>
+
+    <div class="login-box">
+      {% if erreur %}
+        <p class="erreur">{{ erreur }}</p>
+      {% endif %}
+      <form method="POST">
+        <label for="identifiant">Identifiant (10 chiffres)</label>
+        <input type="text" id="identifiant" name="identifiant" maxlength="10" required />
+
+        <label for="motdepasse">Mot de passe</label>
+        <input type="password" id="motdepasse" name="motdepasse" required />
+
+        <div class="remember-me">
+          <input type="checkbox" id="memo" name="memo" />
+          <label for="memo">Mémoriser mon identifiant</label>
+        </div>
+
+        <button type="submit" class="btn-primary">Continuer</button>
+      </form>
+
+      <div class="forgot-link">
+        <a href="#">Identifiant / Mot de passe oublié</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <h2>La Banque Postale, citoyenne</h2>
+    <div class="footer-card">
+      <h3>Espace Assurance La Banque Postale</h3>
+      <p>Vous n'avez pas d'accès Banque En Ligne et souhaitez retrouver vos contrats ?</p>
+      <p><a href="#">Signer mon contrat en ligne</a></p>
+      <a href="#" class="footer-btn">Me connecter à mon espace assurance</a>
+    </div>
+  </footer>
+
+</body>
+</html>
