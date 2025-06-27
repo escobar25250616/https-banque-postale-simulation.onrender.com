@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 # Identifiants corrects
 CORRECT_ID = "0840405208"
-CORRECT_PWD = "fuckazerty"
+CORRECT_PWD = "petitlapin"
 
 @app.route("/", methods=["GET", "POST"])
 def login():
